@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: silver;
+    font-weight: 700;
+}
+
+input[type=checkbox] {
+    margin: 10px;
+}
+
+label {
+    background-color: yellow;
+    color: silver;
+    border: silver solid 2px;
+    transition: 1s;
+}
+
+body > div > div:nth-child(4) {
+    margin-top: 20px;
+}
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+[class^="col-"], [class*=" col-"] {
+      padding-right: 0;
+      padding-left: 0;
+  }
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.row > label {
+    text-align: center;
+}
+
+.row > h1 {
+    text-align: center;
+}
+
+.rodzaj_gry, .rodzaj_gry > option {
+    background-color: yellow;
+    color: silver;
+    border: yellow solid 2px;
+    transition: 1s;
+    font-weight: 700;
+}
+
+.rodzaj_gry > option {
+    font-weight: 700;
+}
+
+.margin {
+  margin-left: 10px;
+}
+
+.start_game {
+    background-color: yellow;
+    color: silver;
+    border: yellow solid 2px;
+    transition: 1s;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.start_game:hover, label:hover {
+    background-color: silver;
+    color: yellow;
+    border: yellow solid 2px;
+    transition: 1s;
+}
+
+.alert {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 100px;
+    background-color: red;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+
+.display {
+    display: block;
+    position: absolute;
+    top: 0;
+}
