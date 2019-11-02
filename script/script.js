@@ -1,46 +1,52 @@
-const divContainer = document.createElement('div');
+const dce = (el) => {
+    return document.createElement(el);
+};
+
+//create container, add to body, add class to container
+
+const divContainer = dce('div');
 document.body.appendChild(divContainer);
 divContainer.classList = 'container-fluid no-gutters';
 
-const headerDiv = document.createElement('div');
-let divTwo = document.body.childNodes;
-divTwo[2].appendChild(headerDiv);
-console.log(divTwo[2]);
-
-headerDiv.classList = 'row no-gutters';
-
-// let p = document.createElement("p");
-//
-// p.innerText = "extra";
-//
-// const count = document.getElementById("d1").appendChild(p);
-// console.log(count);
-//
-// let text = ["text1", "tex2", "text3", "text4"];
-// text.forEach(function (el) {
-//     var div = document.createElement("div");
-//     div.className = "finalBlock";
-//     div.innerHTML = el;
-//     document.body.appendChild(div);
-//     document.getElementById("d1").appendChild(div);
-// });
+//create header div, get child of body, add headerDiv, add class
+const firstRow = dce('div');
+let divContainerParent = document.body.childNodes;
+divContainerParent[2].appendChild(firstRow);
+firstRow.classList = 'row no-gutters';
 
 
-// <div class="row no-gutters">
-//     <h1 class="col-xl-12">Maszyna losująca</h1>
-// </div>
-// <div class="row no-gutters">
-//     <h3>Wybierz rodzaj gry: </h3>
-// <select class="margin rodzaj_gry" name="" id="rodzajGry">
-//     <option value="duzyMottek">Duzy Mottek</option>
-// <option value="malyMottek">Mały Mottek</option>
-// </select>
-// <!--        <label class="col-xl-6 col-sm-12" for="duzyMottek"><input type="checkbox" name="" id="duzyMottek" value="duzyMottek">Duzy Mottek</label>-->
-// <!--        <label class="col-xl-6 col-sm-12" for="malyMottek"><input type="checkbox" name="" id="malyMottek" value="malyMottek">Mały Mottek</label>-->
-// </div>
-// <div class="row no-gutters">
-//     <button class="col-xl-12 start_game" onclick="wszystkieFunkcje()">Rozpocznij losowanie</button>
-// </div>
+//create h1, add content, class and child h1
+const h1 = dce('h1');
+h1.textContent = 'Maszyna losująca';
+h1.classList = 'col-xl-12';
+firstRow.appendChild(h1);
+
+
+//create header div, get child of body, add headerDiv, add class
+const secondRow = dce('div');
+divContainerParent = document.body.childNodes;
+divContainerParent[2].appendChild(secondRow);
+secondRow.classList = 'row no-gutters';
+
+//create el. h3, add content, add child to secondRow
+const h3 = dce('h3');
+h3.textContent = 'Wybierz rodzaj gry: ';
+secondRow.appendChild(h3);
+
+//create el.select, add class and id, append select to secondRow
+const select = dce('select');
+select.classList = 'margin rodzaj_gry';
+select.id = 'rodzajGry';
+secondRow.appendChild(select);
+
+//add options to select
+const firstOption = dce('option');
+firstOption.textContent = 'Duzy Mottek';
+const SecondOption = dce('option');
+SecondOption.textContent = 'Maly Mottek';
+select.appendChild(firstOption);
+select.appendChild(SecondOption);
+
 
 
 let wszystkie_liczby = [];
